@@ -90,7 +90,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ===========================================================
    HEADER
    =========================================================== */
-.site-header { position: sticky; top: 0; z-index: 100; background: #fff; }
+.site-header { position: sticky; top: 0; z-index: 100; background: #000; }
 
 .utility-bar {
   background: #2a2a2a;
@@ -116,16 +116,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .utility-actions__link { color: #d8d8d8; }
 .utility-actions__link:hover { color: #fff; }
 
-.header-bar { border-bottom: 1px solid var(--line); position: relative; }
+.header-bar { background: #000; border-bottom: 1px solid rgba(255, 255, 255, 0.12); position: relative; }
 .header-bar__inner {
   display: flex;
   align-items: center;
   gap: 28px;
   height: var(--header-h);
+  padding-right: 0;
 }
 .header-logo { display: flex; align-items: center; }
-.header-logo__full { width: 60px; height: 30px; }
-.header-logo__brand { display: none; }
+.header-logo__full { display: none; }
+.header-logo__brand { display: inline-flex; align-items: center; gap: 10px; }
+.header-logo__star { width: 30px; height: 30px; }
+.header-logo__tagline { color: #fff; font-weight: 700; font-size: 0.82rem; line-height: 1.04; }
 
 /* Primary nav */
 .main-nav { flex: 1; }
@@ -134,7 +137,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   font: inherit;
   font-weight: 600;
   font-size: 1rem;
-  color: var(--ink);
+  color: #fff;
   background: none;
   border: none;
   padding: 24px 16px;
@@ -189,7 +192,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 /* Header actions */
-.header-actions { display: flex; align-items: center; gap: 12px; }
+.header-actions { display: flex; align-items: center; gap: 16px; height: var(--header-h); }
 .header-icon-btn {
   font: inherit;
   background: none;
@@ -201,8 +204,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   gap: 2px;
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--ink);
+  color: #fff;
 }
+.header-icon-btn span { display: none; }
 .header-icon-btn svg {
   width: 22px;
   height: 22px;
@@ -213,8 +217,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .header-icon-btn:hover { color: var(--nab-red); }
 
-.login-wrap { position: relative; }
-.login-btn { padding: 10px 26px; }
+.login-wrap { position: relative; height: 100%; }
+.login-btn {
+  height: 100%;
+  padding: 0 30px;
+  border-radius: 0;
+  border-color: transparent;
+  background: var(--nab-red-bright);
+  color: #fff;
+  font-size: 1.05rem;
+}
+.login-btn:hover { background: var(--nab-red); }
 .login-panel {
   position: absolute;
   right: 0;
