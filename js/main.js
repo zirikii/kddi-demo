@@ -68,16 +68,42 @@
   });
   if (overlay) overlay.addEventListener("click", () => closeAllMenus());
 
-  /* ---------- Mobile hamburger ---------- */
+  /* ---------- Mobile slide-in menu ---------- */
   const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileMenuClose = document.getElementById("mobileMenuClose");
+
+  function setMobileMenu(open) {
+    if (!mobileMenu) return;
+    mobileMenu.classList.toggle("is-open", open);
+    mobileMenu.setAttribute("aria-hidden", String(!open));
+    if (hamburger) hamburger.setAttribute("aria-expanded", String(open));
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) pushClick("mobile-menu-open", "Menu");
+  }
+
   if (hamburger) {
     hamburger.addEventListener("click", () => {
-      const open = mainNav.classList.toggle("is-open");
-      hamburger.setAttribute("aria-expanded", String(open));
-      document.body.style.overflow = open ? "hidden" : "";
-      if (!open) closeAllMenus();
+      setMobileMenu(!(mobileMenu && mobileMenu.classList.contains("is-open")));
     });
   }
+  if (mobileMenuClose) {
+    mobileMenuClose.addEventListener("click", () => setMobileMenu(false));
+  }
+  if (mobileMenu) {
+    mobileMenu.addEventListener("click", (e) => {
+      if (e.target === mobileMenu) setMobileMenu(false);
+    });
+  }
+
+  document.querySelectorAll(".mobile-acc__btn").forEach((btn) => {
+    const panel = btn.nextElementSibling;
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      if (panel) panel.hidden = open;
+    });
+  });
 
   /* ---------- Search panel ---------- */
   const searchToggle = document.getElementById("searchToggle");
@@ -129,6 +155,7 @@
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
     closeAllMenus();
+    if (mobileMenu && mobileMenu.classList.contains("is-open")) setMobileMenu(false);
     if (searchPanel && !searchPanel.hidden) {
       searchPanel.hidden = true;
       searchToggle.setAttribute("aria-expanded", "false");
@@ -153,9 +180,7 @@
     const nowMobile = isMobile();
     if (nowMobile !== wasMobile) {
       wasMobile = nowMobile;
-      mainNav.classList.remove("is-open");
-      hamburger && hamburger.setAttribute("aria-expanded", "false");
-      document.body.style.overflow = "";
+      setMobileMenu(false);
       closeAllMenus();
     }
   });

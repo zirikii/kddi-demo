@@ -34,8 +34,16 @@
     <!-- Main header bar -->
     <div class="header-bar">
       <div class="container header-bar__inner">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+
         <a href="#" class="header-logo" aria-label="NAB home" data-dl-id="header-logo">
-          <img src="assets/logos/nab-logo.svg" alt="NAB" width="60" height="30" />
+          <img class="header-logo__full" src="assets/logos/nab-logo.svg" alt="NAB" width="60" height="30" />
+          <span class="header-logo__brand" aria-hidden="true">
+            <img class="header-logo__star" src="assets/logos/nab-star.svg" alt="" width="30" height="30" />
+            <span class="header-logo__tagline">more<br />than<br />money</span>
+          </span>
         </a>
 
         <nav class="main-nav" aria-label="Primary" id="mainNav">
@@ -198,13 +206,10 @@
                 <li><a href="#">NAB Equity Lending</a></li>
               </ul>
               <a href="#" class="btn btn--primary btn--block">Continue</a>
-            </div>
           </div>
-          <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mainNav" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
         </div>
       </div>
+    </div>
 
       <!-- Search panel -->
       <div class="search-panel" id="searchPanel" hidden>
@@ -218,6 +223,84 @@
     </div>
   </header>
   <div class="mega-overlay" id="megaOverlay" hidden></div>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-menu__search">
+        <input type="search" placeholder="Search nab.com.au" aria-label="Search nab.com.au" />
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+
+      <div class="mobile-menu__body">
+        <nav class="mobile-acc" aria-label="Mobile navigation">
+          <div class="mobile-acc__item mobile-acc__item--active">
+            <button class="mobile-acc__btn" aria-expanded="false">Personal<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="#">Bank accounts</a>
+              <a href="#">Credit cards</a>
+              <a href="#">Home loans</a>
+              <a href="#">Personal loans</a>
+              <a href="#">Insurance</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item">
+            <button class="mobile-acc__btn" aria-expanded="false">Business<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="#">Business accounts</a>
+              <a href="#">Business loans</a>
+              <a href="#">Merchant &amp; payments</a>
+              <a href="#">Business credit cards</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item">
+            <button class="mobile-acc__btn" aria-expanded="false">Corporate<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="#">Corporate &amp; institutional</a>
+              <a href="#">NAB Connect</a>
+              <a href="#">Markets &amp; research</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item">
+            <button class="mobile-acc__btn" aria-expanded="false">About us<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="#">Careers</a>
+              <a href="#">Newsroom</a>
+              <a href="#">Shareholder centre</a>
+              <a href="#">Sustainability</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item">
+            <button class="mobile-acc__btn" aria-expanded="false">Help and support<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="#">Contact us</a>
+              <a href="#">Find a branch or ATM</a>
+              <a href="#">Financial assistance</a>
+              <a href="#">Report fraud</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="mobile-menu__contact">
+          <a href="#" aria-label="Call us">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 005 5l1.5-2 5 1.5v3a2 2 0 01-2 2A17 17 0 014.5 5a2 2 0 012-2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-menu__footer">
+        <p class="mobile-menu__footer-title">Latest offers</p>
+        <div class="mobile-menu__offers">
+          <a href="#" class="btn btn--primary">Personal</a>
+          <a href="#" class="btn btn--primary">Business</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
 
   <main id="main">
     <!-- ===================== HERO ===================== -->
