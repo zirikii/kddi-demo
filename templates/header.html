@@ -1,0 +1,289 @@
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="siteHeader">
+    <!-- Utility bar -->
+    <div class="utility-bar">
+      <div class="container utility-bar__inner">
+        <nav class="utility-nav" aria-label="Audience">
+          <a href="index.html" class="utility-nav__link{{AUDIENCE_PERSONAL}}">Personal</a>
+          <a href="business.html" class="utility-nav__link{{AUDIENCE_BUSINESS}}">Business</a>
+          <a href="corporate.html" class="utility-nav__link{{AUDIENCE_CORPORATE}}">Corporate</a>
+        </nav>
+        <div class="utility-actions">
+          <a href="help-support.html" class="utility-actions__link">Help &amp; support</a>
+          <a href="contact-us.html" class="utility-actions__link">Contact us</a>
+          <a href="find-us.html" class="utility-actions__link">Find us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main header bar -->
+    <div class="header-bar">
+      <div class="container header-bar__inner">
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <a href="index.html" class="header-logo" aria-label="NAB home" data-dl-id="header-logo">
+          <img class="header-logo__full" src="assets/logos/nab-logo.svg" alt="NAB" width="60" height="30" />
+          <span class="header-logo__brand" aria-hidden="true">
+            <img class="header-logo__star" src="assets/logos/nab-star.svg" alt="" width="30" height="30" />
+            <span class="header-logo__tagline">more<br />than<br />money</span>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary" id="mainNav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item" data-menu="bank">
+              <button class="main-nav__btn" aria-expanded="false" aria-controls="mega-bank">Bank
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+            </li>
+            <li class="main-nav__item" data-menu="borrow">
+              <button class="main-nav__btn" aria-expanded="false" aria-controls="mega-borrow">Borrow
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+            </li>
+            <li class="main-nav__item" data-menu="cards">
+              <button class="main-nav__btn" aria-expanded="false" aria-controls="mega-cards">Credit cards
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+            </li>
+            <li class="main-nav__item" data-menu="insure">
+              <button class="main-nav__btn" aria-expanded="false" aria-controls="mega-insure">Insurance
+                <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>
+              </button>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__btn" href="international.html">International</a>
+            </li>
+          </ul>
+
+          <div class="mega-menu" id="mega-bank" hidden>
+            <div class="container mega-menu__inner">
+              <div class="mega-col">
+                <h3 class="mega-col__title">Bank accounts</h3>
+                <ul>
+                  <li><a href="transaction-accounts.html">Transaction accounts</a></li>
+                  <li><a href="savings-accounts.html">Savings accounts</a></li>
+                  <li><a href="term-deposits.html">Term deposits</a></li>
+                  <li><a href="foreign-currency-accounts.html">Foreign currency accounts</a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h3 class="mega-col__title">Ways to bank</h3>
+                <ul>
+                  <li><a href="internet-banking.html">NAB Internet Banking</a></li>
+                  <li><a href="nab-app.html">The NAB app</a></li>
+                  <li><a href="branch-atm-locator.html">Branch and ATM locator</a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--promo">
+                <div class="mega-promo">
+                  <h4>Get ready to save more</h4>
+                  <p>Open a savings account online in minutes.</p>
+                  <a href="savings-accounts.html" class="btn btn--ghost">Compare savings accounts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mega-menu" id="mega-borrow" hidden>
+            <div class="container mega-menu__inner">
+              <div class="mega-col">
+                <h3 class="mega-col__title">Home loans</h3>
+                <ul>
+                  <li><a href="buying-a-home.html">Buying a home</a></li>
+                  <li><a href="refinancing.html">Refinancing</a></li>
+                  <li><a href="investing-in-property.html">Investing in property</a></li>
+                  <li><a href="building-renovating.html">Building or renovating</a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h3 class="mega-col__title">Calculators &amp; tools</h3>
+                <ul>
+                  <li><a href="repayments-calculator.html">Repayments calculator</a></li>
+                  <li><a href="borrowing-power-calculator.html">Borrowing power calculator</a></li>
+                  <li><a href="personal-loans.html">Personal loans</a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--promo">
+                <div class="mega-promo">
+                  <h4>Refinancing made simple</h4>
+                  <p>A quick, no-pressure chat with a home loan expert.</p>
+                  <a href="refinancing.html" class="btn btn--ghost">Talk to an expert</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mega-menu" id="mega-cards" hidden>
+            <div class="container mega-menu__inner">
+              <div class="mega-col">
+                <h3 class="mega-col__title">Credit cards</h3>
+                <ul>
+                  <li><a href="latest-offers.html">Latest offers</a></li>
+                  <li><a href="help-me-choose-card.html">Help me choose a card</a></li>
+                  <li><a href="qantas-rewards-cards.html">Qantas Rewards cards</a></li>
+                  <li><a href="low-rate-cards.html">Low rate cards</a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h3 class="mega-col__title">Manage your card</h3>
+                <ul>
+                  <li><a href="activate-card.html">Activate a card</a></li>
+                  <li><a href="balance-transfers.html">Balance transfers</a></li>
+                  <li><a href="report-lost-stolen-card.html">Report a lost or stolen card</a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--promo">
+                <div class="mega-promo">
+                  <h4>Earn Qantas Points</h4>
+                  <p>Discover cards that reward your everyday spend.</p>
+                  <a href="latest-offers.html" class="btn btn--ghost">View card offers</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mega-menu" id="mega-insure" hidden>
+            <div class="container mega-menu__inner">
+              <div class="mega-col">
+                <h3 class="mega-col__title">Insurance</h3>
+                <ul>
+                  <li><a href="home-contents-insurance.html">Home &amp; contents insurance</a></li>
+                  <li><a href="car-insurance.html">Car insurance</a></li>
+                  <li><a href="life-insurance.html">Life insurance</a></li>
+                  <li><a href="travel-insurance.html">Travel insurance</a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h3 class="mega-col__title">Claims &amp; support</h3>
+                <ul>
+                  <li><a href="make-claim.html">Make a claim</a></li>
+                  <li><a href="manage-policy.html">Manage your policy</a></li>
+                </ul>
+              </div>
+              <div class="mega-col mega-col--promo">
+                <div class="mega-promo">
+                  <h4>Protect what matters</h4>
+                  <p>Cover for your home, car and the people you love.</p>
+                  <a href="insurance.html" class="btn btn--ghost">Explore insurance</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <button class="header-icon-btn" id="searchToggle" aria-expanded="false" aria-controls="searchPanel" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>Search</span>
+          </button>
+          <div class="login-wrap">
+            <button class="btn btn--primary login-btn" id="loginToggle" aria-expanded="false" aria-controls="loginPanel" data-dl-id="login-open">Login</button>
+            <div class="login-panel" id="loginPanel" hidden>
+              <h3>Login to NAB</h3>
+              <ul>
+                <li><a href="internet-banking.html">NAB Internet Banking</a></li>
+                <li><a href="nab-connect.html">NAB Connect</a></li>
+                <li><a href="nab-trade.html">NAB Trade</a></li>
+                <li><a href="nab-equity-lending.html">NAB Equity Lending</a></li>
+              </ul>
+              <a href="internet-banking.html" class="btn btn--primary btn--block">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="searchPanel" hidden>
+        <div class="container">
+          <form class="search-form" role="search" onsubmit="return false;">
+            <input type="search" placeholder="What can we help you find?" aria-label="Search NAB" />
+            <button type="submit" class="btn btn--primary">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="mega-overlay" id="megaOverlay" hidden></div>
+
+  <!-- ===================== MOBILE MENU ===================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="mobile-menu__search">
+        <input type="search" placeholder="Search nab.com.au" aria-label="Search nab.com.au" />
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+
+      <div class="mobile-menu__body">
+        <nav class="mobile-acc" aria-label="Mobile navigation">
+          <div class="mobile-acc__item{{MOBILE_PERSONAL_ACTIVE}}">
+            <button class="mobile-acc__btn" aria-expanded="false">Personal<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="bank-accounts.html">Bank accounts</a>
+              <a href="credit-cards.html">Credit cards</a>
+              <a href="home-loans.html">Home loans</a>
+              <a href="personal-loans.html">Personal loans</a>
+              <a href="insurance.html">Insurance</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item{{MOBILE_BUSINESS_ACTIVE}}">
+            <button class="mobile-acc__btn" aria-expanded="false">Business<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="business-accounts.html">Business accounts</a>
+              <a href="business-loans.html">Business loans</a>
+              <a href="merchant-payments.html">Merchant &amp; payments</a>
+              <a href="business-credit-cards.html">Business credit cards</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item{{MOBILE_CORPORATE_ACTIVE}}">
+            <button class="mobile-acc__btn" aria-expanded="false">Corporate<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="corporate-institutional.html">Corporate &amp; institutional</a>
+              <a href="nab-connect.html">NAB Connect</a>
+              <a href="markets-research.html">Markets &amp; research</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item">
+            <button class="mobile-acc__btn" aria-expanded="false">About us<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="careers.html">Careers</a>
+              <a href="newsroom.html">Newsroom</a>
+              <a href="shareholder-centre.html">Shareholder centre</a>
+              <a href="sustainability.html">Sustainability</a>
+            </div>
+          </div>
+          <div class="mobile-acc__item">
+            <button class="mobile-acc__btn" aria-expanded="false">Help and support<span class="mobile-acc__icon" aria-hidden="true"></span></button>
+            <div class="mobile-acc__panel" hidden>
+              <a href="contact-us.html">Contact us</a>
+              <a href="find-us.html">Find a branch or ATM</a>
+              <a href="financial-assistance.html">Financial assistance</a>
+              <a href="report-fraud.html">Report fraud</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="mobile-menu__contact">
+          <a href="contact-us.html" aria-label="Call us">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 5-2 1.5a12 12 0 005 5l1.5-2 5 1.5v3a2 2 0 01-2 2A17 17 0 014.5 5a2 2 0 012-2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-menu__footer">
+        <p class="mobile-menu__footer-title">Latest offers</p>
+        <div class="mobile-menu__offers">
+          <a href="index.html" class="btn btn--primary">Personal</a>
+          <a href="business.html" class="btn btn--primary">Business</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
