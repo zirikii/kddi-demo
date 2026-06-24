@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+/* Placeholder — full NOC theme tokens added in Phase 2 */
+body {
+  margin: 0;
+  background: #0f1117;
+  color: #edecec;
+}
