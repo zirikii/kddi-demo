@@ -3,7 +3,9 @@ import AppShell from './components/layout/AppShell.jsx';
 import StatusBar from './components/status/StatusBar.jsx';
 import Toolbar from './components/toolbar/Toolbar.jsx';
 import AlertFeed from './components/alerts/AlertFeed.jsx';
+import AlertDetailDrawer from './components/alerts/AlertDetailDrawer.jsx';
 import EscalateModal from './components/escalation/EscalateModal.jsx';
+import EscalationHistory from './components/escalation/EscalationHistory.jsx';
 import { useAlerts } from './hooks/useAlerts.js';
 import { useAutoRefresh } from './hooks/useAutoRefresh.js';
 import { useEscalations } from './hooks/useEscalations.js';
@@ -21,6 +23,7 @@ export default function App() {
   const { push } = useToast();
 
   const [escalateTarget, setEscalateTarget] = useState(null);
+  const [detailTarget, setDetailTarget] = useState(null);
 
   const handleLiveAlert = useCallback((alert) => prependAlert(alert), [prependAlert]);
   const autoRefresh = useAutoRefresh(handleLiveAlert);
@@ -64,11 +67,11 @@ export default function App() {
             alerts={filtered}
             totalCount={counts.total}
             onEscalate={requestEscalate}
-            onOpenDetail={(a) => console.info('detail', a.id)}
+            onOpenDetail={setDetailTarget}
           />
         </div>
-        <aside className="rounded-xl border border-noc-border bg-noc-card p-4 text-sm text-noc-muted">
-          Escalation history — added in the next phase.
+        <aside className="h-[calc(100vh-340px)] min-h-0">
+          <EscalationHistory />
         </aside>
       </div>
 
@@ -77,6 +80,17 @@ export default function App() {
         alert={escalateTarget}
         onClose={() => setEscalateTarget(null)}
         onSubmit={handleEscalateSubmit}
+      />
+
+      <AlertDetailDrawer
+        alert={detailTarget}
+        allAlerts={alerts}
+        onClose={() => setDetailTarget(null)}
+        onEscalate={(a) => {
+          setDetailTarget(null);
+          requestEscalate(a);
+        }}
+        onOpenRelated={setDetailTarget}
       />
     </AppShell>
   );
