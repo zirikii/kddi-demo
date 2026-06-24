@@ -1,0 +1,49 @@
+{
+  "_disclaimer": "Unofficial demo. Not affiliated with KDDI Corporation or Telehouse. Brand marks are referenced/recreated solely for internal UI fidelity in a non-production demo.",
+  "_note": "Official assets could not be downloaded in the build sandbox because kddi.com / telehouse.net are unreachable (network allowlist; curl returns SSL_ERROR_SYSCALL). The committed KDDI files are faithful recreations refined against a reference image provided by the maintainer (slanted bold wordmark + signature swoosh). They are still recreations, not the official vector files. Run `bash scripts/fetch-brand-assets.sh` in a networked environment, or drop the official file into public/brand/, to replace them, then update this manifest.",
+  "fetchedAt": "2026-06-24T12:05:00+09:00",
+  "assets": [
+    {
+      "file": "kddi-logo.svg",
+      "description": "Primary KDDI wordmark (KDDI Blue) for light surfaces — slanted bold + swoosh",
+      "sourceUrl": "https://www.kddi.com/brand/guideline-kddi/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox; recreation refined against a maintainer-provided reference image"
+    },
+    {
+      "file": "kddi-logo-white.svg",
+      "description": "Reversed/white KDDI wordmark for the dark NOC header bar — slanted bold + swoosh",
+      "sourceUrl": "https://www.kddi.com/brand/guideline-kddi/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox; recreation refined against a maintainer-provided reference image"
+    },
+    {
+      "file": "kddi-logo-mark.svg",
+      "description": "Icon-only KDDI mark (slanted K + swoosh) for compact placements",
+      "sourceUrl": "https://www.kddi.com/brand/visual-identity/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox; recreation refined against a maintainer-provided reference image"
+    },
+    {
+      "file": "favicon.svg",
+      "description": "SVG favicon derived from the KDDI mark",
+      "sourceUrl": "https://www.kddi.com/favicon.ico",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "favicon.ico",
+      "description": "ICO fallback favicon (32x32) derived from the KDDI mark",
+      "sourceUrl": "https://www.kddi.com/favicon.ico",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "telehouse-logo.svg",
+      "description": "Telehouse wordmark for the Overseas/Telehouse region card",
+      "sourceUrl": "https://www.telehouse.net/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    }
+  ]
+}

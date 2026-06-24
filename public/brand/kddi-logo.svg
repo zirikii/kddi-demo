@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" role="img" aria-label="KDDI">
+  <!--
+    Recreated KDDI wordmark for demo visual fidelity (NOT the official asset).
+    Slanted bold "KDDI" in KDDI navy with the signature light swoosh across the lower half.
+  -->
+  <title>KDDI</title>
+  <defs>
+    <linearGradient id="kddi-swoosh" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="0.55" stop-color="#cfe0f2" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#4a90d9" stop-opacity="0.55" />
+    </linearGradient>
+    <clipPath id="kddi-clip">
+      <text x="2" y="80" font-family="'Arial Black', Arial, Helvetica, sans-serif"
+        font-size="92" font-weight="900" font-style="italic" letter-spacing="-2"
+        transform="skewX(-6)">KDDI</text>
+    </clipPath>
+  </defs>
+
+  <!-- Letters -->
+  <g transform="skewX(-6)">
+    <text x="2" y="80" font-family="'Arial Black', Arial, Helvetica, sans-serif"
+      font-size="92" font-weight="900" letter-spacing="-2" fill="#0E0D6A">KDDI</text>
+  </g>
+
+  <!-- Glossy swoosh, clipped to the letterforms so it sweeps "through" them -->
+  <g clip-path="url(#kddi-clip)">
+    <path d="M-20 96 C 80 58, 230 96, 360 40 L 360 100 L -20 100 Z" fill="url(#kddi-swoosh)" />
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+
+/* Self-hosted fonts (installed via @fontsource — no external hotlinks) */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+
+/*
+ * KDDI NOC Console design tokens (Tailwind v4 CSS-first @theme).
+ * Each token becomes a utility, e.g. bg-noc-bg, text-kddi, border-noc-border,
+ * text-sev-critical, bg-region-healthy, etc.
+ */
+@theme {
+  /* KDDI corporate identity */
+  --color-kddi: #0e0d6a; /* KDDI Blue (primary) */
+  --color-kddi-arc: #4a90d9; /* light-blue arc accent */
+  --color-kddi-fg: #edecec; /* body text on dark */
+
+  /* NOC console surfaces */
+  --color-noc-bg: #0f1117;
+  --color-noc-card: #1a1d27;
+  --color-noc-elevated: #252836;
+  --color-noc-border: #2e3344;
+  --color-noc-muted: #8b90a0;
+
+  /* Severity */
+  --color-sev-critical: #dc2626;
+  --color-sev-critical-bg: #7f1d1d4d; /* /30 */
+  --color-sev-critical-border: #7f1d1d99;
+  --color-sev-warning: #f59e0b;
+  --color-sev-warning-bg: #78350f4d;
+  --color-sev-warning-border: #78350f99;
+  --color-sev-info: #3b82f6;
+  --color-sev-info-bg: #1e3a5f4d;
+  --color-sev-info-border: #1e3a5f99;
+
+  /* Region health */
+  --color-region-healthy: #22c55e;
+  --color-region-degraded: #f59e0b;
+  --color-region-critical: #ef4444;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Motion */
+  --animate-slide-in: slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-noc-bg);
+    color: var(--color-kddi-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Compact ops-console scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-noc-elevated) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-noc-elevated);
+    border-radius: 9999px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-kddi-arc);
+    outline-offset: 2px;
+  }
+}

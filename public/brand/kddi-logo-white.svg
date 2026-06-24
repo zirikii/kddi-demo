@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" role="img" aria-label="KDDI">
+  <!--
+    Recreated KDDI wordmark (white/reversed) for the dark NOC header. NOT the official asset.
+    Slanted bold "KDDI" in white with a subtle blue swoosh across the lower half.
+  -->
+  <title>KDDI</title>
+  <defs>
+    <linearGradient id="kddi-swoosh-w" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#9ec3ec" stop-opacity="0.9" />
+      <stop offset="0.55" stop-color="#4a90d9" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#0E0D6A" stop-opacity="0.5" />
+    </linearGradient>
+    <clipPath id="kddi-clip-w">
+      <text x="2" y="80" font-family="'Arial Black', Arial, Helvetica, sans-serif"
+        font-size="92" font-weight="900" font-style="italic" letter-spacing="-2"
+        transform="skewX(-6)">KDDI</text>
+    </clipPath>
+  </defs>
+
+  <g transform="skewX(-6)">
+    <text x="2" y="80" font-family="'Arial Black', Arial, Helvetica, sans-serif"
+      font-size="92" font-weight="900" letter-spacing="-2" fill="#ffffff">KDDI</text>
+  </g>
+
+  <g clip-path="url(#kddi-clip-w)">
+    <path d="M-20 96 C 80 58, 230 96, 360 40 L 360 100 L -20 100 Z" fill="url(#kddi-swoosh-w)" />
+  </g>
+</svg>
