@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- provider + useToast hook are intentionally colocated */
 import { createContext, useContext, useState, useCallback, useRef } from 'react';
 import ToastViewport from '../components/ui/ToastViewport.jsx';
 

@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- provider + hook are intentionally colocated */
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { readJSON, writeJSON } from '../lib/storage.js';
 import { STORAGE_KEYS } from '../lib/constants.js';
