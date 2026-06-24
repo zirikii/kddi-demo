@@ -1,0 +1,32 @@
+[
+  {
+    "id": "esc-seed-001",
+    "alertId": "evt-011",
+    "team": "noc",
+    "priority": "P1",
+    "note": "鹿児島アクセスノード全断。約3,800回線影響。電源と伝送を至急確認、現地派遣を要請済み。",
+    "notify": true,
+    "createdAt": "2026-06-24T13:35:00+09:00",
+    "alertSnapshot": {
+      "title": "Partial outage — Kagoshima access node unreachable",
+      "severity": "critical",
+      "region": "kyushu",
+      "asset": "kagoshima-olt-01.kddi.net"
+    }
+  },
+  {
+    "id": "esc-seed-002",
+    "alertId": "evt-006",
+    "team": "infrastructure",
+    "priority": "P2",
+    "note": "Telehouse London suite 4, PDU feed B at 92%. Facilities to rebalance before new cross-connects.",
+    "notify": false,
+    "createdAt": "2026-06-24T13:12:00+09:00",
+    "alertSnapshot": {
+      "title": "Telehouse London — power feed B over threshold (92%)",
+      "severity": "warning",
+      "region": "overseas",
+      "asset": "thn2-pdu-4b.telehouse.net"
+    }
+  }
+]
