@@ -44,6 +44,7 @@ const P = {
   merchantPayments: "merchant-payments.html",
   businessCreditCards: "business-credit-cards.html",
   businessTransaction: "business-transaction-accounts.html",
+  businessSavings: "business-savings-accounts.html",
   eftpos: "eftpos-ecommerce.html",
   corporateInstitutional: "corporate-institutional.html",
   nabConnect: "nab-connect.html",
@@ -939,7 +940,7 @@ const pages = [
       { type: "breadcrumb", items: [{ label: "Home", href: P.home }, { label: "Business", href: P.business }, { label: "Business accounts" }] },
       relatedLinks("Account types", [
         { title: "Transaction accounts", more: { href: P.businessTransaction, label: "Compare accounts" } },
-        { title: "Savings", more: { href: P.savingsAccounts, label: "Business savings" } },
+        { title: "Savings", more: { href: P.businessSavings, label: "Business savings" } },
       ]),
     ],
   },
@@ -952,6 +953,17 @@ const pages = [
       hubHero("Business transaction accounts", "Everyday banking built for business cashflow.", "Business accounts"),
       { type: "breadcrumb", items: [{ label: "Home", href: P.home }, { label: "Business", href: P.business }, { label: "Transaction accounts" }] },
       { type: "content", paragraphs: ["Compare accounts with features for payments, payroll and integrations.", "Open online and connect to NAB Connect for advanced banking."] },
+    ],
+  },
+  {
+    file: P.businessSavings,
+    title: "Business savings accounts - NAB",
+    description: "Business savings accounts to help your business reach its financial goals.",
+    audience: "business",
+    sections: [
+      hubHero("Business savings accounts", "Grow business reserves with savings accounts designed for cashflow management.", "Business accounts", "assets/images/savings-banner.jpg"),
+      { type: "breadcrumb", items: [{ label: "Home", href: P.home }, { label: "Business", href: P.business }, { label: "Business accounts", href: P.businessAccounts }, { label: "Business savings" }] },
+      { type: "content", paragraphs: ["Compare NAB business savings accounts and find one that fits your operating needs.", "Set up automatic transfers and track balances through NAB Connect."] },
     ],
   },
   {
@@ -1370,6 +1382,7 @@ const pages = [
             href: P.business,
             links: [
               { href: P.businessAccounts, label: "Business accounts" },
+              { href: P.businessSavings, label: "Business savings accounts" },
               { href: P.businessLoans, label: "Business loans" },
               { href: P.merchantPayments, label: "Merchant & payments" },
               { href: P.businessCreditCards, label: "Business credit cards" },
