@@ -1,0 +1,49 @@
+{
+  "_disclaimer": "Unofficial demo. Not affiliated with KDDI Corporation or Telehouse. Brand marks are referenced/recreated solely for internal UI fidelity in a non-production demo.",
+  "_note": "Official assets could not be downloaded in the build sandbox because kddi.com / telehouse.net are unreachable (network allowlist; curl returns SSL_ERROR_SYSCALL). The committed files are faithful recreations. Run `bash scripts/fetch-brand-assets.sh` in a networked environment to replace them with official files, then update this manifest.",
+  "fetchedAt": "2026-06-24T00:00:00+09:00",
+  "assets": [
+    {
+      "file": "kddi-logo.svg",
+      "description": "Primary KDDI wordmark (KDDI Blue) for light surfaces",
+      "sourceUrl": "https://www.kddi.com/brand/guideline-kddi/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "kddi-logo-white.svg",
+      "description": "Reversed/white KDDI wordmark for the dark NOC header bar",
+      "sourceUrl": "https://www.kddi.com/brand/guideline-kddi/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "kddi-logo-mark.svg",
+      "description": "Icon-only KDDI mark (arc + K) for compact placements",
+      "sourceUrl": "https://www.kddi.com/brand/visual-identity/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "favicon.svg",
+      "description": "SVG favicon derived from the KDDI mark",
+      "sourceUrl": "https://www.kddi.com/favicon.ico",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "favicon.ico",
+      "description": "ICO fallback favicon (32x32) derived from the KDDI mark",
+      "sourceUrl": "https://www.kddi.com/favicon.ico",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    },
+    {
+      "file": "telehouse-logo.svg",
+      "description": "Telehouse wordmark for the Overseas/Telehouse region card",
+      "sourceUrl": "https://www.telehouse.net/",
+      "status": "recreated-fallback",
+      "reason": "source domain blocked in sandbox network"
+    }
+  ]
+}
